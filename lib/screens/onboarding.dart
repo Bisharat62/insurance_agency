@@ -49,7 +49,7 @@ class Onboarding extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Dots(),
+                  const Dots(),
                   Text('Controla el seguro de tu coche',
                       style: getregular(24, Colors.black)),
                   Text(
@@ -58,13 +58,13 @@ class Onboarding extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => HomeInsurance()));
+                          builder: (context) => const HomeInsurance()));
                     },
                     child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 50),
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
                       width: width,
                       height: 65,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Color(0xff7BB564),
                           borderRadius: BorderRadius.only(
                               topRight: Radius.circular(10),
@@ -76,7 +76,7 @@ class Onboarding extends StatelessWidget {
                             'Comenzar',
                             style: getregular(12, Colors.white),
                           ),
-                          Icon(
+                          const Icon(
                             Icons.arrow_forward,
                             color: Colors.white,
                           )

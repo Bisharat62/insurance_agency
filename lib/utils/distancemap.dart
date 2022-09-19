@@ -18,51 +18,51 @@ class _TravelmapState extends State<Travelmap> {
       child: Stack(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 8),
+            padding: const EdgeInsets.only(top: 8),
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: 4,
-              color: Color(0xffD5D8DB),
+              color: const Color(0xffD5D8DB),
             ),
           ),
           verticalbar(
               (0 * 0.22),
               (distance / 100 > 0 * 0.21)
-                  ? Color(0xff53A4E0)
-                  : Color(0xffD5D8DB),
+                  ? const Color(0xff53A4E0)
+                  : const Color(0xffD5D8DB),
               '1 mes',
               context),
           verticalbar(
               (1 * 0.22),
               (distance / 100 > 1 * 0.21)
-                  ? Color(0xff53A4E0)
-                  : Color(0xffD5D8DB),
+                  ? const Color(0xff53A4E0)
+                  : const Color(0xffD5D8DB),
               '3 meses',
               context),
           verticalbar(
               (2 * 0.22),
               (distance / 100 > 2 * 0.21)
-                  ? Color(0xff53A4E0)
-                  : Color(0xffD5D8DB),
+                  ? const Color(0xff53A4E0)
+                  : const Color(0xffD5D8DB),
               '6 meses',
               context),
           verticalbar(
               (3 * 0.22),
               (distance / 100 > 3 * 0.21)
-                  ? Color(0xff53A4E0)
-                  : Color(0xffD5D8DB),
+                  ? const Color(0xff53A4E0)
+                  : const Color(0xffD5D8DB),
               '1 año',
               context),
           Padding(
-            padding: EdgeInsets.only(top: 5),
+            padding: const EdgeInsets.only(top: 5),
             child: Row(
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width * (distance / 100),
                   height: 4,
-                  color: Color(0xff53A4E0),
+                  color: const Color(0xff53A4E0),
                 ),
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 5,
                   backgroundColor: Color(0xff53A4E0),
                 )
@@ -91,7 +91,7 @@ Widget verticalbar(double position, Color color, String title, context) {
         vertical(5),
         Text(
           title,
-          style: TextStyle(fontSize: 10),
+          style: const TextStyle(fontSize: 10),
         )
       ],
     ),

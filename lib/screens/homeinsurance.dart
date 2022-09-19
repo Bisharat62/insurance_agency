@@ -22,16 +22,16 @@ class _HomeInsuranceState extends State<HomeInsurance> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Bottombar(),
+      bottomNavigationBar: const Bottombar(),
       backgroundColor: Colors.white,
       body: Container(
-        padding: EdgeInsets.only(left: 30),
+        padding: const EdgeInsets.only(left: 30),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 40, right: 30, bottom: 15),
+              const Padding(
+                padding: EdgeInsets.only(top: 40, right: 30, bottom: 15),
                 child: Appbar(),
               ),
               Text(
@@ -40,7 +40,7 @@ class _HomeInsuranceState extends State<HomeInsurance> {
               ),
               Text(
                 '¿Qué necesitas realizar?',
-                style: getregular(13, Color(0xff797A74)),
+                style: getregular(13, const Color(0xff797A74)),
               ),
               vertical(20),
               Padding(
@@ -111,7 +111,7 @@ class _HomeInsuranceState extends State<HomeInsurance> {
         builder: (context) {
           return StatefulBuilder(
             builder: (BuildContext context, setState) {
-              return Container(
+              return SizedBox(
                 height: MediaQuery.of(context).size.height * 0.92,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
@@ -127,8 +127,8 @@ class _HomeInsuranceState extends State<HomeInsurance> {
                     Expanded(
                         child: Container(
                       width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(20),
+                      decoration: const BoxDecoration(
                           color: Color(0xffF8F6F5),
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(20),
@@ -157,7 +157,7 @@ class _HomeInsuranceState extends State<HomeInsurance> {
                           vertical(10),
                           Text(
                             'Automóvil personal',
-                            style: getregular(10, Color(0xff797A74)),
+                            style: getregular(10, const Color(0xff797A74)),
                           ),
                           vertical(10),
                           Image.asset('assets/images/toyotafront.png'),
@@ -166,7 +166,7 @@ class _HomeInsuranceState extends State<HomeInsurance> {
                             style: getregular(10, Colors.black),
                           ),
                           vertical(10),
-                          LinearProgressIndicator(
+                          const LinearProgressIndicator(
                             value: 0.4,
                             backgroundColor: Color(0xff797A74),
                             color: Color(0xff7BB564),
@@ -177,11 +177,11 @@ class _HomeInsuranceState extends State<HomeInsurance> {
                             children: [
                               Text(
                                 '17/octubre/2020',
-                                style: getregular(10, Color(0xff797A74)),
+                                style: getregular(10, const Color(0xff797A74)),
                               ),
                               Text(
                                 '17/octubre/2020',
-                                style: getregular(10, Color(0xff797A74)),
+                                style: getregular(10, const Color(0xff797A74)),
                               ),
                             ],
                           ),
@@ -189,7 +189,7 @@ class _HomeInsuranceState extends State<HomeInsurance> {
                             children: [
                               Text('Póliza: 0000003332222',
                                   style: getregular(10, Colors.black)),
-                              Spacer(),
+                              const Spacer(),
                               Text('Recordatorio',
                                   style: getregular(10, Colors.black)),
                               horizental(15),
@@ -201,7 +201,7 @@ class _HomeInsuranceState extends State<HomeInsurance> {
                                   scale: .5,
                                   child: CupertinoSwitch(
                                       value: switchvalue,
-                                      activeColor: Color(0xff7BB564),
+                                      activeColor: const Color(0xff7BB564),
                                       onChanged: ((value) => {
                                             setState(() {
                                               switchvalue = value;
@@ -217,7 +217,7 @@ class _HomeInsuranceState extends State<HomeInsurance> {
                             child: Text('Reportar siniestro',
                                 style: getregular(18, Colors.black)),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -243,7 +243,7 @@ class _HomeInsuranceState extends State<HomeInsurance> {
 
 Widget bottomcard(String text, String img) {
   return Container(
-    padding: EdgeInsets.all(10),
+    padding: const EdgeInsets.all(10),
     width: 90,
     height: 90,
     decoration: BoxDecoration(
@@ -257,8 +257,8 @@ Widget bottomcard(String text, String img) {
               height: 45,
               child: Image.asset(img),
             ),
-            Spacer(),
-            Icon(
+            const Spacer(),
+            const Icon(
               Icons.arrow_forward,
               size: 12,
             )
